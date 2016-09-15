@@ -40,6 +40,8 @@
             </button>
             <a class="navbar-brand" href="https://getbootstrap.com/examples/dashboard/?#">Project name</a>
         </div>
+
+
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="https://getbootstrap.com/examples/dashboard/?#">Dashboard</a></li>
@@ -51,6 +53,7 @@
                 <input type="text" class="form-control" placeholder="Search...">
             </form>
         </div>
+
     </div>
 </nav>
 
@@ -59,23 +62,11 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="https://getbootstrap.com/examples/dashboard/?#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?#">Reports</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?#">Analytics</a></li>
                 <li><a href="https://getbootstrap.com/examples/dashboard/?#">Export</a></li>
             </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">Nav item</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">Nav item again</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">One more nav</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">Another nav item</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">More navigation</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">Nav item again</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">One more nav</a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?">Another nav item</a></li>
-            </ul>
+
         </div>
+
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Autoreloaded 2</h1>
 
@@ -84,6 +75,7 @@
 
 
         </div>
+
     </div>
 </div>
 
