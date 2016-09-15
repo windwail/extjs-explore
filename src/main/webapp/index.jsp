@@ -7,6 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+
     <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
     <title>Dashboard Template for Bootstrap</title>
@@ -25,6 +30,21 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <!-- LIBS -->
+    <link rel="stylesheet" type="text/css" href="/extjs/resources/css/ext-all.css" />
+    <script type="text/javascript" src="/extjs/ext-all-debug.js"></script>
+
+    <!-- APP -->
+    <script type="text/javascript" src="/app/app.js"></script>
 </head>
 
 <body>
@@ -61,8 +81,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="https://getbootstrap.com/examples/dashboard/?#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="https://getbootstrap.com/examples/dashboard/?#">Export</a></li>
+                <li id="panels"><a href="/index.jsp?p=ya">Panels try</a></li>
             </ul>
 
         </div>
@@ -70,9 +89,27 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Autoreloaded 2</h1>
 
+            <% if (request.getParameter("p") != null) { %>
 
+                <% if(request.getParameter("p").equalsIgnoreCase("panels")) { %>
+                    <jsp:include page="panels.jsp"/>
+                <% } %>
 
+            <% } %>
 
+            <script>
+                function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                            results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                }
+
+                $('#'+getParameterByName('p')).addClass('active');
+            </script>
 
         </div>
 
@@ -81,14 +118,8 @@
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="./js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="./js/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+
 
 
 </body></html>

@@ -25,6 +25,15 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="./libs/resources/css/ext-all.css">
+
+    <!-- LIBS -->
+    <script type="text/javascript" src="./libs/ext-all-debug.js"></script>
+
+    <!-- APP -->
+    <script type="text/javascript" src="./app.js"></script>
 </head>
 
 <body>
