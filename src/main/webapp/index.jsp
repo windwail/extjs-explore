@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- saved from url=(0046)https://getbootstrap.com/examples/dashboard/?# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -81,18 +82,27 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li id="panels"><a href="/index.jsp?p=ya">Panels try</a></li>
+                <li id="life-cycle"><a href="/index.jsp?p=life-cycle">Life cycle</a></li>
+                <li id="simplepanel"><a href="/index.jsp?p=simplepanel">Simple panel</a></li>
+                <li id="window"><a href="/index.jsp?p=window">Window</a></li>
             </ul>
 
         </div>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Autoreloaded 2</h1>
 
             <% if (request.getParameter("p") != null) { %>
 
-                <% if(request.getParameter("p").equalsIgnoreCase("panels")) { %>
-                    <jsp:include page="panels.jsp"/>
+                <% if(request.getParameter("p").equalsIgnoreCase("simplepanel")) { %>
+                    <jsp:include page="simplepanel.jsp"/>
+                <% } %>
+
+                <% if(request.getParameter("p").equalsIgnoreCase("life-cycle")) { %>
+                    <jsp:include page="life-cycle.jsp"/>
+                <% } %>
+
+                <% if(request.getParameter("p").equalsIgnoreCase("window")) { %>
+                    <jsp:include page="window.jsp"/>
                 <% } %>
 
             <% } %>
@@ -115,11 +125,4 @@
 
     </div>
 </div>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-
-
-
-
 </body></html>
